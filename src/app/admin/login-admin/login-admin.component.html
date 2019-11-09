@@ -1,6 +1,6 @@
 
-<h3>Basic Buttons</h3>
-<div class="example-button-row">
+<h3 >Basic Buttons</h3>
+<div class="example-button-row" >
   <button mat-button>Basic</button>
   <button mat-button color="primary" (click)="colocarNombre()">{{nombre}}</button>
   <button mat-button color="accent" (click)="cambiaNonbreBoton()">{{nombreBoton}}</button>
@@ -12,10 +12,25 @@
 
 
 <mat-form-field>
-  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date" >
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
 
 
 <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+
+<div [hidden]="visibilidad">
+<mat-grid-list cols="4" rowHeight="100px" >
+  <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+    {{tile.text}}
+  </mat-grid-tile>
+</mat-grid-list>
+
+</div>
+
+<mat-slider></mat-slider>

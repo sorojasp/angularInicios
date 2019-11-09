@@ -1,0 +1,8 @@
+
+
+
+<div *ngFor="let visitante of visitantes ">
+<mat-checkbox *ngIf="visitante.visible">{{visitante.estadoCivil}}</mat-checkbox>
+</div>
+
+<app-footer *ngIf="visitantes[1].visible"></app-footer>

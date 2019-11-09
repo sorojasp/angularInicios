@@ -1,67 +1,37 @@
-<button mat-button [matMenuTriggerFor]="animals">Animal index</button>
 
-<mat-menu #animals="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
-  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
-</mat-menu>
-
-<mat-menu #vertebrates="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
-  <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
-  <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
-  <button mat-menu-item>Birds</button>
-  <button mat-menu-item>Mammals</button>
-</mat-menu>
-
-<mat-menu #invertebrates="matMenu">
-  <button mat-menu-item>Insects</button>
-  <button mat-menu-item>Molluscs</button>
-  <button mat-menu-item>Crustaceans</button>
-  <button mat-menu-item>Corals</button>
-  <button mat-menu-item>Arachnids</button>
-  <button mat-menu-item>Velvet worms</button>
-  <button mat-menu-item>Horseshoe crabs</button>
-</mat-menu>
-
-<mat-menu #fish="matMenu">
-  <button mat-menu-item>Baikal oilfish</button>
-  <button mat-menu-item>Bala shark</button>
-  <button mat-menu-item>Ballan wrasse</button>
-  <button mat-menu-item>Bamboo shark</button>
-  <button mat-menu-item>Banded killifish</button>
-</mat-menu>
-
-<mat-menu #amphibians="matMenu">
-  <button mat-menu-item>Sonoran desert toad</button>
-  <button mat-menu-item>Western toad</button>
-  <button mat-menu-item>Arroyo toad</button>
-  <button mat-menu-item>Yosemite toad</button>
-</mat-menu>
-
-<mat-menu #reptiles="matMenu">
-  <button mat-menu-item>Banded Day Gecko</button>
-  <button mat-menu-item>Banded Gila Monster</button>
-  <button mat-menu-item>Black Tree Monitor</button>
-  <button mat-menu-item>Blue Spiny Lizard</button>
-  <button mat-menu-item disabled>Velociraptor</button>
-</mat-menu>
-
-
-
-<div class="example-container">
+<div class="example-container" >
+  <div [hidden]="visibilidad">
     <mat-form-field>
-      <input matInput placeholder="Input">
+      <input matInput placeholder="nombre"  [(ngModel)]="nombre">
     </mat-form-field>
   
     <mat-form-field>
-      <textarea matInput placeholder="Textarea"></textarea>
+      <textarea matInput placeholder="apellido"  [(ngModel)]="apellido"></textarea>
     </mat-form-field>
   
     <mat-form-field>
-      <mat-select placeholder="Select">
-        <mat-option value="option">Option</mat-option>
-        <mat-option value="Ester">Ester</mat-option>
-        <mat-option value="Emily">Greicy</mat-option>
+      <mat-select placeholder="Estado" >
+        <mat-option value="Casado">Casado</mat-option>
+        <mat-option value="Soltero">Soltero</mat-option>
+        <mat-option value="Viudo">Viudo</mat-option>
+        <mat-option value="AmigoEspecial">AmigoEspecial</mat-option>
+        <mat-option value="FriendZoneado">FriendZoneado</mat-option>
       </mat-select>
     </mat-form-field>
   </div>
+
+    <div class="example-button-row" >
+    <button mat-raised-button  color="primary" (click)="capturarDato()" >{{nombreButton}}</button>
+    </div>
+
+    
+    
+  </div>
+
+
+
+  <mat-card>{{alerta}}</mat-card>
+
+
+
+ 

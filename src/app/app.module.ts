@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ComponentesModule} from './componentes/componentes.module'
 import {DocentesModule} from './docentes/docentes.module';
 import {AdminModule} from './admin/admin.module';
+
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import {AdminModule} from './admin/admin.module';
     BrowserAnimationsModule,
     ComponentesModule,
     DocentesModule,
-    AdminModule
+    AdminModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

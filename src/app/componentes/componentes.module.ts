@@ -8,6 +8,11 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { FooterComponent } from './footer/footer.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatSliderModule} from '@angular/material/slider';
 @NgModule({
   declarations: [HeaderComponent, LoginComponent, FooterComponent],
   imports: [
@@ -16,9 +21,14 @@ import { FooterComponent } from './footer/footer.component';
     MatRadioModule,
     MatMenuModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule,
+    MatCardModule,
+    FormsModule,
+    MatProgressBarModule,
+    MatSliderModule
   ],
-  exports: [HeaderComponent, LoginComponent]
+  exports: [HeaderComponent, LoginComponent, FooterComponent]
 
 })
 export class ComponentesModule { }

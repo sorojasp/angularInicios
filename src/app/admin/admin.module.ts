@@ -6,9 +6,10 @@ import { LoginAdminComponent } from './login-admin/login-admin.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import {MatInputModule} from '@angular/material/input';
+import {MatSliderModule} from '@angular/material/slider';
 
 @NgModule({
   declarations: [ GestionComponent, LoginAdminComponent],
@@ -18,7 +19,9 @@ import {MatInputModule} from '@angular/material/input';
     MatProgressBarModule,
     MatDatepickerModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatGridListModule,
+    MatSliderModule
   ],
   exports: [GestionComponent, LoginAdminComponent]
 })
